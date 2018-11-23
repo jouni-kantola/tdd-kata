@@ -8,6 +8,6 @@
   },
   "scripts": {
     "test": "ava *-tests.js",
-    "test:watch": "npx ava *-tests.js -- --watch"
+    "test:watch": "npx ava *-tests.js --watch"
   }
 }
