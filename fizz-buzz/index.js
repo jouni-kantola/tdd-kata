@@ -5,12 +5,12 @@ const shouldReplace = (number, match) =>
   number % match === 0 || [...`${number}`].includes(`${match}`);
 
 module.exports = peopleCount => {
-  let fizzBuzz = [];
-  for (let i = 1; i <= peopleCount; i++) {
-    let fizzOrBuzz = "";
-    if (isFizz(i)) fizzOrBuzz = "Fizz";
-    if (isBuzz(i)) fizzOrBuzz += "Buzz";
-    fizzBuzz.push(fizzOrBuzz || i);
-  }
-  return fizzBuzz;
+  return [...Array(peopleCount).keys()]
+    .map(x => x + 1)
+    .map(i => {
+      let fizzOrBuzz = "";
+      if (isFizz(i)) fizzOrBuzz = "Fizz";
+      if (isBuzz(i)) fizzOrBuzz += "Buzz";
+      return fizzOrBuzz || i;
+    });
 };
