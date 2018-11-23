@@ -1,5 +1,5 @@
 import test from "ava";
-import fizzBuzz from "./";
+import fizzBuzz, { fizz, buzz } from "./";
 
 // Step 1
 test("2 class mates count to 2", t => {
@@ -13,12 +13,12 @@ test("100 class mates count to 100", t => {
 
 test("numbers dividable by 3 turns into fizz", t => {
   const numberOfStudents = 3;
-  t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, "Fizz"]);
+  t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, fizz]);
 });
 
 test("numbers dividable by 5 turns into Buzz", t => {
   const numberOfStudents = 5;
-  t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, "Fizz", 4, "Buzz"]);
+  t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, fizz, 4, buzz]);
 });
 
 test("multiples of 3 and 5 turns into FizzBuzz", t => {
@@ -26,29 +26,29 @@ test("multiples of 3 and 5 turns into FizzBuzz", t => {
   t.deepEqual(fizzBuzz(numberOfStudents), [
     1,
     2,
-    "Fizz",
+    fizz,
     4,
-    "Buzz",
-    "Fizz",
+    buzz,
+    fizz,
     7,
     8,
-    "Fizz",
-    "Buzz",
+    fizz,
+    buzz,
     11,
-    "Fizz",
-    "Fizz",
+    fizz,
+    fizz,
     14,
-    "FizzBuzz",
+    `${fizz}${buzz}`,
     16,
     17,
-    "Fizz",
+    fizz,
     19,
-    "Buzz",
-    "Fizz",
+    buzz,
+    fizz,
     22,
-    "Fizz",
-    "Fizz",
-    "Buzz"
+    fizz,
+    fizz,
+    buzz
   ]);
 });
 
@@ -58,17 +58,17 @@ test("number is Fizz if it is divisible by 3 or if it has a 3 in it", t => {
   t.deepEqual(fizzBuzz(numberOfStudents), [
     1,
     2,
-    "Fizz",
+    fizz,
     4,
-    "Buzz",
-    "Fizz",
+    buzz,
+    fizz,
     7,
     8,
-    "Fizz",
-    "Buzz",
+    fizz,
+    buzz,
     11,
-    "Fizz",
-    "Fizz"
+    fizz,
+    fizz
   ]);
 });
 
@@ -77,28 +77,28 @@ test("number is Buzz if it is divisible by 5 or if it has a 5 in it", t => {
   t.deepEqual(fizzBuzz(numberOfStudents), [
     1,
     2,
-    "Fizz",
+    fizz,
     4,
-    "Buzz",
-    "Fizz",
+    buzz,
+    fizz,
     7,
     8,
-    "Fizz",
-    "Buzz",
+    fizz,
+    buzz,
     11,
-    "Fizz",
-    "Fizz",
+    fizz,
+    fizz,
     14,
-    "FizzBuzz",
+    `${fizz}${buzz}`,
     16,
     17,
-    "Fizz",
+    fizz,
     19,
-    "Buzz"
+    buzz
   ]);
 });
 
 test("100 class mates count to Buzz", t => {
   const numberOfStudents = 100;
-  t.deepEqual(fizzBuzz(numberOfStudents)[99], "Buzz");
+  t.deepEqual(fizzBuzz(numberOfStudents)[99], buzz);
 });
