@@ -103,8 +103,14 @@ test("100 class mates count to Buzz", t => {
   t.deepEqual(fizzBuzz(numberOfStudents)[99], buzz);
 });
 
-test("only multipliers of 3 & 5 are FizzBuzz", t => {
+test("Buzz trumps Fizz", t => {
   const numberOfStudents = 51;
+  const lastValue = fizzBuzz(numberOfStudents).pop();
+  t.is(lastValue, buzz);
+});
+
+test("only multipliers of 3 & 5 are FizzBuzz", t => {
+  const numberOfStudents = 1257;
   const lastValue = fizzBuzz(numberOfStudents).pop();
   t.is(lastValue, buzz);
 });
