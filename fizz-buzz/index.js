@@ -1,6 +1,10 @@
-const isFizzBuzz = number => number % 3 === 0 && number % 5 === 0;
-const isFizz = number => shouldReplace(number, 3);
-const isBuzz = number => shouldReplace(number, 5);
+const fizzMultiplier = 3;
+const buzzMultiplier = 5;
+
+const isFizzBuzz = number =>
+  number % fizzMultiplier === 0 && number % buzzMultiplier === 0;
+const isFizz = number => shouldReplace(number, fizzMultiplier);
+const isBuzz = number => shouldReplace(number, buzzMultiplier);
 
 const shouldReplace = (number, match) =>
   number % match === 0 || [...`${number}`].includes(`${match}`);
