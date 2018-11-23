@@ -8,14 +8,13 @@ const fizz = "Fizz";
 const buzz = "Buzz";
 
 module.exports = peopleCount => {
-  return [...Array(peopleCount).keys()]
-    .map(x => x + 1)
-    .map(i => {
-      let fizzOrBuzz = "";
-      if (isFizz(i)) fizzOrBuzz = fizz;
-      if (isBuzz(i)) fizzOrBuzz += buzz;
-      return fizzOrBuzz || i;
-    });
+  const xs = [...Array(peopleCount).keys()].map(x => x + 1);
+  return xs.map(x => {
+    if (isFizz(x) && isBuzz(x)) return `${fizz}${buzz}`;
+    if (isBuzz(x)) return buzz;
+    if (isFizz(x)) return fizz;
+    return x;
+  });
 };
 
 module.exports.fizz = fizz;
