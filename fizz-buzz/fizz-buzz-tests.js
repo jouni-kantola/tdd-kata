@@ -9,3 +9,8 @@ test("100 class mates count to 100", t => {
   const numberOfStudents = 100;
   t.deepEqual(fizzBuzz(numberOfStudents).length, 100);
 });
+
+test("numbers dividable by 3 turns into fizz", t => {
+  const numberOfStudents = 3;
+  t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, "Fizz"]);
+});
