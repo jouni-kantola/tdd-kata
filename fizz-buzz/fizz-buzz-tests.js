@@ -19,3 +19,24 @@ test("numbers dividable by 5 turns into Buzz", t => {
   const numberOfStudents = 5;
   t.deepEqual(fizzBuzz(numberOfStudents), [1, 2, "Fizz", 4, "Buzz"]);
 });
+
+test("multiples of 3 and 5 turns into FizzBuzz", t => {
+  const numberOfStudents = 15;
+  t.deepEqual(fizzBuzz(numberOfStudents), [
+    1,
+    2,
+    "Fizz",
+    4,
+    "Buzz",
+    "Fizz",
+    7,
+    8,
+    "Fizz",
+    "Buzz",
+    11,
+    "Fizz",
+    13,
+    14,
+    "FizzBuzz"
+  ]);
+});
