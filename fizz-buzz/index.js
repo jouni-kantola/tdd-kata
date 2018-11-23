@@ -12,8 +12,8 @@ const shouldReplace = (number, match) =>
 const fizz = "Fizz";
 const buzz = "Buzz";
 
-module.exports = peopleCount => {
-  const xs = [...Array(peopleCount).keys()].map(x => x + 1);
+module.exports = count => {
+  const xs = [...Array(count).keys()].map(x => x + 1);
   return xs.map(x => {
     if (isFizzBuzz(x)) return `${fizz}${buzz}`;
     if (isBuzz(x)) return buzz;
