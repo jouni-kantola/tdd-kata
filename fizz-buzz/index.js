@@ -1,10 +1,16 @@
+const isFizz = number => shouldReplace(number, 3);
+const isBuzz = number => shouldReplace(number, 5);
+
+const shouldReplace = (number, match) =>
+  number % match === 0 || [...`${number}`].includes(`${match}`);
+
 module.exports = peopleCount => {
   let fizzBuzz = [];
   for (let i = 1; i <= peopleCount; i++) {
-    let nextNumber = "";
-    if (i % 3 === 0 || [...`${i}`].includes('3')) nextNumber = "Fizz";
-    if (i % 5 === 0 || [...`${i}`].includes('5')) nextNumber += "Buzz";
-    fizzBuzz.push(nextNumber || i);
+    let fizzOrBuzz = "";
+    if (isFizz(i)) fizzOrBuzz = "Fizz";
+    if (isBuzz(i)) fizzOrBuzz += "Buzz";
+    fizzBuzz.push(fizzOrBuzz || i);
   }
   return fizzBuzz;
 };
