@@ -97,3 +97,8 @@ test("number is Buzz if it is divisible by 5 or if it has a 5 in it", t => {
     "Buzz"
   ]);
 });
+
+test("100 class mates count to Buzz", t => {
+  const numberOfStudents = 100;
+  t.deepEqual(fizzBuzz(numberOfStudents)[99], "Buzz");
+});
