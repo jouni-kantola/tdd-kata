@@ -8,3 +8,7 @@ test("I + I = II", t => {
 test("can't have more than three I", t => {
   t.is(add("II", "II"), "IV");
 });
+
+test("5 is V", t => {
+  t.is(add("III", "II"), "V");
+});
