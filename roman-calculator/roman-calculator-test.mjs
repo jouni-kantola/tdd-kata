@@ -36,3 +36,7 @@ test("can't have more than than one L", t => {
 test("can't have more than than one V", t => {
   t.is(add("V", "V"), "X");
 });
+
+test("can't have more than than one D", t => {
+  t.is(add("D", "D"), "M");
+});
