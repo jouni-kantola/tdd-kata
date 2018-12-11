@@ -1,0 +1,17 @@
+{
+  "ava": {
+    "require": [
+			"esm"
+		],
+    "extensions": [
+      "mjs"
+    ]
+  },
+  "scripts": {
+    "test": "ava *-test.mjs",
+    "test:watch": "npx ava *-test.mjs --watch"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-rc.2"
+  }
+}
