@@ -7,6 +7,7 @@ function normalize(roman) {
     if(roman === "CCCC") return "CD";
     if(roman === "CCCCC") return "D";
     if(roman === "LL") return "C";
+    if(roman === "VV") return "X";
     return roman;
 }
 export const add = (first, second) => {

@@ -32,3 +32,7 @@ test("50 is L", t => {
 test("can't have more than than one L", t => {
   t.is(add("L", "L"), "C");
 });
+
+test("can't have more than than one V", t => {
+  t.is(add("V", "V"), "X");
+});
