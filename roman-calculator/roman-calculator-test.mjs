@@ -16,3 +16,7 @@ test("5 is V", t => {
 test("can't have more than three C", t => {
   t.is(add("CC", "CC"), "CD");
 });
+
+test("500 is D", t => {
+  t.is(add("CCC", "CC"), "D");
+});
