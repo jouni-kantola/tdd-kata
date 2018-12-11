@@ -12,3 +12,7 @@ test("can't have more than three I", t => {
 test("5 is V", t => {
   t.is(add("III", "II"), "V");
 });
+
+test("can't have more than three C", t => {
+  t.is(add("CC", "CC"), "CD");
+});
